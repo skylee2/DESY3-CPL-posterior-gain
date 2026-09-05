@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: >-
+  If you use this reproducibility package, cite the accompanying DES Y3 CPL
+  posterior-gain paper and this software package.
+title: "DES Y3 CPL Posterior-Gain Reproducibility Package"
+type: software
+version: "1.0.0"
+authors:
+  - family-names: Lee
+    given-names: Seokcheon
+preferred-citation:
+  type: article
+  title: >-
+    Growth-Sensitive Information Preferentially Tightens the Distance-Probe
+    Weak Direction in CPL Dark Energy: A Posterior-Level Test with Historical
+    DES Year 3 Chains
+  authors:
+    - family-names: Lee
+      given-names: Seokcheon

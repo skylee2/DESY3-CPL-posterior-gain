@@ -1,0 +1,27 @@
+DES Y3 CPL Posterior-Gain Reproducibility Package
+Copyright (c) 2026 Seokcheon Lee
+
+LICENSE SCOPE
+
+The MIT License applies to original analysis/reproduction code and original
+documentation authored by Seokcheon Lee for this package. The unchanged
+historical production scripts are retained as provenance objects and have not
+been rewritten merely to add license headers.
+
+EXTERNAL CHAIN DATA
+
+DES chain data are not redistributed. Filenames and SHA256 checksums are
+included solely to identify the external inputs used by the analysis; their
+inclusion does not imply ownership of DES data or grant redistribution rights.
+
+SURVEY PRODUCTS
+
+DES, DESI, Pantheon/Pantheon+, and other survey products remain governed by
+their respective collaborations, authors, archives, terms, and licenses. This
+package does not relicense those products.
+
+FIGURES AND NUMERICAL OUTPUTS
+
+Final figure PDFs and compact author-generated numerical outputs are included
+as reproducibility materials. See MANIFEST.md and the documents under docs/
+for origin and status.

@@ -1,0 +1,22 @@
+{
+  "method": "conditional exponential-multiplier bootstrap of very-local retained points",
+  "repetitions": 20000,
+  "successful": 20000,
+  "failed": 0,
+  "lambda1_q025_q16_q50_q84_q975": [
+    2.0004738855031623,
+    6.374215905147913,
+    12.643618379300237,
+    19.755787349329697,
+    29.822720648890655
+  ],
+  "lambda2_q025_q16_q50_q84_q975": [
+    0.03093550877602648,
+    0.18413291556653133,
+    0.5947518042365221,
+    1.165862182439439,
+    1.8252248157424475
+  ],
+  "fraction_lambda2_above_one": 0.2357,
+  "warning": "Diagnostic only: D3 reference local ESS is below 3."
+}

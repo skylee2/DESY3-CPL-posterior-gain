@@ -1,0 +1,229 @@
+{
+  "ref_metadata": {
+    "path": "data/des_y3_public/d3_w0wa_nla_realy3dat.txt",
+    "original_samples": 20671,
+    "retained_samples": 20671,
+    "effective_sample_size": 5881.14992791748,
+    "burn_fraction": 0.0,
+    "thin": 1,
+    "sampler": "polychord",
+    "n_varied": 30,
+    "nsample": 20671,
+    "log_z": 5745.883799890459,
+    "log_z_error": 0.2389997411169632
+  },
+  "new_metadata": {
+    "path": "data/des_y3_public/d3_brs_w0wa_nla_realy3dat.txt",
+    "original_samples": 12468,
+    "retained_samples": 12468,
+    "effective_sample_size": 3114.6412945448474,
+    "burn_fraction": 0.0,
+    "thin": 1,
+    "sampler": "polychord",
+    "n_varied": 31,
+    "nsample": 12468,
+    "log_z": 5706.304437767784,
+    "log_z_error": 0.38189789281434816
+  },
+  "ref_mean": [
+    -0.8059193097905467,
+    -0.9208557254507146
+  ],
+  "new_mean": [
+    -0.9725313313256522,
+    -0.18824325285648422
+  ],
+  "ref_intervals_16_50_84": [
+    [
+      -1.124223656094536,
+      -0.7623766188540405,
+      -0.4769816691152579
+    ],
+    [
+      -2.1059274131163623,
+      -0.9128775556044467,
+      0.21936571520382372
+    ]
+  ],
+  "new_intervals_16_50_84": [
+    [
+      -1.0503299388206777,
+      -0.9741147282818305,
+      -0.8956794023247002
+    ],
+    [
+      -0.5823299894515913,
+      -0.15790695402721472,
+      0.2020143279231725
+    ]
+  ],
+  "ref_covariance": [
+    [
+      0.10127481697059468,
+      -0.21995641116433043
+    ],
+    [
+      -0.21995641116433043,
+      1.1201228543444686
+    ]
+  ],
+  "new_covariance": [
+    [
+      0.006214314117390363,
+      -0.026916195857747134
+    ],
+    [
+      -0.026916195857747134,
+      0.15641345237037083
+    ]
+  ],
+  "ref_gaussian_fom": 3.9205313011787433,
+  "new_gaussian_fom": 63.56151133717874,
+  "ordinary_ref": {
+    "information": [
+      [
+        17.216921906316127,
+        3.3808544653131767
+      ],
+      [
+        3.380854465313177,
+        1.5566512263332235
+      ]
+    ],
+    "eigenvalues": [
+      17.915631526705365,
+      0.8579416059439853
+    ],
+    "eigenvectors": [
+      [
+        -0.9793050792110962,
+        0.20238962876429353
+      ],
+      [
+        -0.20238962876429353,
+        -0.9793050792110962
+      ]
+    ],
+    "eigenvalue_ratio_weak_to_strong": 0.0478878796242891,
+    "effective_dimension": 1.0955566241144596,
+    "condition_number": 20.88211062685666,
+    "ellipse": {
+      "confidence": 0.68,
+      "semi_axes": [
+        1.6297867182618542,
+        0.35665110848403436
+      ],
+      "axis_ratio_minor_to_major": 0.21883299482548121,
+      "orientation_degrees": -78.32326708462273,
+      "area": 1.8260986067049987,
+      "major_vector": [
+        -0.20238962876429356,
+        0.9793050792110962
+      ],
+      "minor_vector": [
+        -0.9793050792110962,
+        -0.20238962876429356
+      ]
+    }
+  },
+  "ordinary_new": {
+    "information": [
+      [
+        631.9206276105645,
+        108.74320029098988
+      ],
+      [
+        108.74320029098989,
+        25.10623746052156
+      ]
+    ],
+    "eigenvalues": [
+      650.819202935048,
+      6.207662136037968
+    ],
+    "eigenvectors": [
+      [
+        -0.9852320671939158,
+        0.17122433755983227
+      ],
+      [
+        -0.17122433755983227,
+        -0.9852320671939158
+      ]
+    ],
+    "eigenvalue_ratio_weak_to_strong": 0.009538228294498395,
+    "effective_dimension": 1.0190747212128441,
+    "condition_number": 104.84127336067174,
+    "ellipse": {
+      "confidence": 0.68,
+      "semi_axes": [
+        0.6058925370561093,
+        0.059173800019307894
+      ],
+      "axis_ratio_minor_to_major": 0.09766385357182249,
+      "orientation_degrees": -80.14098774740683,
+      "area": 0.112635407749315,
+      "major_vector": [
+        -0.17122433755983227,
+        0.9852320671939158
+      ],
+      "minor_vector": [
+        -0.9852320671939158,
+        -0.17122433755983227
+      ]
+    }
+  },
+  "generalized_eigenvalues": [
+    37.220342603124074,
+    7.061845515148372
+  ],
+  "generalized_eigenvectors": [
+    [
+      -0.26613656540965286,
+      0.1744882389232816
+    ],
+    [
+      0.1385553741990798,
+      -1.0492498571003102
+    ]
+  ],
+  "incremental_gain": {
+    "delta": [
+      36.220342603124074,
+      6.061845515148372
+    ],
+    "r_gain": 1.3256006011033634
+  },
+  "pairwise_display_angles_to_geometry_axes_degrees": [
+    [
+      50.82098935572314,
+      39.17901064427686
+    ],
+    [
+      2.2349595064706045,
+      87.76504049352928
+    ]
+  ],
+  "determinant_check": {
+    "generalized_product": 262.84430948415763,
+    "information_determinant_ratio": 262.8443094841579,
+    "relative_error": 1.0813134774035134e-15,
+    "passes": true
+  },
+  "mean_shift": {
+    "delta": [
+      -0.16661202153510546,
+      0.7326124725942303
+    ],
+    "euclidean_norm": 0.7513192402172637,
+    "mahalanobis_squared": 0.4880737123094741,
+    "mahalanobis_distance": 0.6986227253027733
+  },
+  "hard_prior_w0_plus_wa": {
+    "reference_maximum": -0.0017602435451471443,
+    "new_maximum": -0.00030753943247985305,
+    "reference_weight_within_0p1": 0.005063330647474201,
+    "new_weight_within_0p1": 4.4057892186847505e-10,
+    "warning": "The hard prior w0+wa<0 can truncate broad CPL posteriors; use the dedicated robustness estimators."
+  }
+}

@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.aux
+*.out
+*.synctex.gz
+.ipynb_checkpoints/
+.env
+.venv/
+venv/
+
+# Raw DES chains are external inputs and must never be committed.
+chain_*.txt
