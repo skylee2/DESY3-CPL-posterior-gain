@@ -5,6 +5,8 @@ message: >-
 title: "DES Y3 CPL Posterior-Gain Reproducibility Package"
 type: software
 version: "1.0.0"
+repository-code: https://github.com/skylee2/DESY3-CPL-posterior-gain
+doi: 10.5281/zenodo.22342578
 authors:
   - family-names: Lee
     given-names: Seokcheon

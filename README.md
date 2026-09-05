@@ -1,5 +1,7 @@
 # DES Y3 CPL Posterior-Gain Reproducibility Package
 
+[![DOI](https://zenodo.org/badge/1358128757.svg)](https://doi.org/10.5281/zenodo.22342577)
+
 ## Purpose
 
 This repository accompanies the paper “Growth-Sensitive Information Preferentially Tightens the Distance-Probe Weak Direction in CPL Dark Energy: A Posterior-Level Test with Historical DES Year 3 Chains.” It preserves the code, compact numerical outputs, figures, and provenance records used to audit the covariance-pair generalized-gain analysis. It does not contain the manuscript or the DES chain data.
@@ -92,7 +94,7 @@ Install the declared minimum dependencies with `python -m pip install -r require
 
 ## Citation
 
-Use `CITATION.cff` to cite this software package and cite the accompanying paper. The DOI is to be added after archival; a repository URL will be added once one exists.
+Use `CITATION.cff` to cite this software package and cite the accompanying paper. The exact v1.0.0 reproducibility package associated with the manuscript is permanently archived on Zenodo at https://doi.org/10.5281/zenodo.22342578.
 
 ## License
 
@@ -100,4 +102,4 @@ The MIT license applies to original author-created code and documentation within
 
 ## Version
 
-Version `1.0.0`, repository candidate dated 2026-09-05. This package has not been published or uploaded.
+Version `1.0.0`, archived release dated 2026-09-05.
