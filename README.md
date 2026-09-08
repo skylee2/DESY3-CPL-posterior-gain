@@ -1,6 +1,6 @@
-# DESY3 CPL posterior-gain release candidate v1.1.0
+# DESY3 CPL posterior-gain reproducibility package v1.1.1
 
-This unpublished release candidate reproduces the manuscript-facing numerical analysis for `paper1_Y3_submission_finaljournal_v3.tex` (SHA-256 `56919dc92f8466f3c2b23ffb8c860e49b8d833f97c73ed913e1c85893d79e340`). It supersedes the analysis packaging in public release v1.0.0; it does not replace or modify that release.
+This provenance synchronization patch reproduces the manuscript-facing numerical analysis for `paper1_Y3_submission_finaljournal_v3.tex` (SHA-256 `ef0a8f631010a9c1d632dc5d1e87934de3896ecface2c8294259d4444fda4271`). Its scientific payload is byte-identical to public release v1.1.0; only version, manuscript-provenance, audit, and integrity metadata are updated. It does not replace or modify v1.1.0 or v1.0.0.
 
 The package contains analysis code, machine-readable outputs, figures, provenance records, and integrity hashes. It intentionally contains no raw DES chain files.
 
@@ -62,4 +62,4 @@ For D3 -> D3+BRS, the dominant direction is `v1` with Lambda1 about 37.22 and a 
 
 ## Release status
 
-Version 1.1.0 is a release candidate only. It has not been published to GitHub or Zenodo. The v1.0.0 DOI and release metadata refer only to the older public artifact.
+Version 1.1.1 is a provenance synchronization patch for the final copy-edited journal-submission manuscript. No scientific results, numerical outputs, figures, tables, analysis scripts, bootstrap products, validation results, or conclusions changed relative to v1.1.0. Versioned releases are archived under the Zenodo concept DOI `10.5281/zenodo.22342577`; the published v1.1.0 and v1.0.0 releases remain unchanged.

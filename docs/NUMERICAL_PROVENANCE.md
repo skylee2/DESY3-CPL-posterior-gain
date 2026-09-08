@@ -1,4 +1,4 @@
-# Numerical provenance for release candidate v1.1.0 and manuscript v3
+# Numerical provenance for release v1.1.1 and manuscript v3
 
 All values below were recomputed from verified chain inputs or from the documented synthetic construction. JSON and CSV files retain more digits than the manuscript.
 
@@ -42,7 +42,7 @@ Recovered values are:
 - N_eff_ref = 884973.3591494124
 - N_eff_new = 884685.4314052031
 
-All 12 explicitly named checks pass. This is the sole standalone synthetic validation represented by release candidate v1.1.0; earlier undocumented validation attempts are superseded.
+All 12 explicitly named checks pass. This is the sole standalone synthetic validation introduced in v1.1.0 and retained byte-identically in v1.1.1; earlier undocumented validation attempts are superseded.
 
 ## Public-chain checks
 

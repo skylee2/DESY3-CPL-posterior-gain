@@ -1,6 +1,8 @@
-# Release-package audit against manuscript v3
+# Release-package audit against manuscript v3 — v1.1.1 provenance synchronization
 
-Audit date: 2026-09-08. Authoritative source: `paper1_Y3_submission_finaljournal_v3.tex`, SHA-256 `56919dc92f8466f3c2b23ffb8c860e49b8d833f97c73ed913e1c85893d79e340`.
+Audit date: 2026-09-08. Authoritative source: `paper1_Y3_submission_finaljournal_v3.tex`, SHA-256 `ef0a8f631010a9c1d632dc5d1e87934de3896ecface2c8294259d4444fda4271`.
+
+Version 1.1.1 updates manuscript provenance after the final copy edit. Its scientific and numerical payload is byte-identical to v1.1.0. The v1.1.0 audit history below is retained unchanged.
 
 ## Discrepancies and actions
 
@@ -34,4 +36,4 @@ Audit date: 2026-09-08. Authoritative source: `paper1_Y3_submission_finaljournal
 
 Use **v1.1.0**. The update is minor-level because it adds new supported analysis surfaces (standalone validation, BR/D3 directional bootstraps, full robustness products, a Figure 3 generator, and a release-wide verification gate) while preserving the analysis interface and scientific conclusions. Although one figure correction alone might be patch-level, the aggregate reproducibility expansion is larger than a metadata or bug-fix-only v1.0.1 release.
 
-This candidate is not published to GitHub or Zenodo.
+Version 1.1.1 is the recommended provenance synchronization patch. Version 1.1.0 remains unchanged as a published historical release.

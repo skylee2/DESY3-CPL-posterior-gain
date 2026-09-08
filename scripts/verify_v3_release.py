@@ -316,8 +316,8 @@ def main() -> None:
     payload = {
         "schema_version": 1,
         "authoritative_manuscript": "paper1_Y3_submission_finaljournal_v3.tex",
-        "authoritative_manuscript_sha256": "56919dc92f8466f3c2b23ffb8c860e49b8d833f97c73ed913e1c85893d79e340",
-        "release_candidate": "1.1.0",
+        "authoritative_manuscript_sha256": "ef0a8f631010a9c1d632dc5d1e87934de3896ecface2c8294259d4444fda4271",
+        "release_candidate": "1.1.1",
         "summary": {
             "passed": sum(bool(item["passed"]) for item in CHECKS),
             "total": len(CHECKS),

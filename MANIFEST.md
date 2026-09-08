@@ -1,6 +1,6 @@
-# Package manifest — v1.1.0
+# Package manifest — v1.1.1
 
-This manifest describes release candidate v1.1.0 only.
+This manifest describes the v1.1.1 provenance synchronization patch. The scientific payload is byte-identical to v1.1.0; only version, manuscript-provenance, audit, and integrity metadata differ.
 
 The package contains 75 regular files. `SHA256SUMS` is the exhaustive file-level inventory for the other 74 files and excludes only itself.
 

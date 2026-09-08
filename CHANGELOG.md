@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.1 - 2026-09-08
+
+Provenance synchronization patch for the final journal-submission manuscript.
+
+- Updated the recorded SHA-256 of the authoritative final manuscript source.
+- Synchronized release metadata with the final copy-edited manuscript.
+- No scientific results, numerical outputs, figures, tables, analysis scripts, bootstrap products, validation results, or conclusions changed relative to v1.1.0.
+
 ## 1.1.0 release candidate - 2026-09-08
 
 - aligned all manuscript-facing outputs and documentation with `paper1_Y3_submission_finaljournal_v3.tex`;
