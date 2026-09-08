@@ -1,0 +1,1669 @@
+{
+  "schema_version": 1,
+  "authoritative_manuscript": "paper1_Y3_submission_finaljournal_v3.tex",
+  "authoritative_manuscript_sha256": "56919dc92f8466f3c2b23ffb8c860e49b8d833f97c73ed913e1c85893d79e340",
+  "release_candidate": "1.1.0",
+  "summary": {
+    "passed": 211,
+    "total": 211,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "bs_brs_point.json:lambda1",
+      "passed": true,
+      "actual": 3.149890425439903,
+      "expected": 3.1499,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_point.json:lambda2",
+      "passed": true,
+      "actual": 1.006677652977399,
+      "expected": 1.0067,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_point.json:det_ratio",
+      "passed": true,
+      "actual": 3.1709243006178265,
+      "expected": 3.1709,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_point.json:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.0062120268794252,
+      "expected": 1.0062,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_point.json:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 4.632053146525948,
+      "expected": 4.632,
+      "tolerance": 0.005
+    },
+    {
+      "name": "bs_brs_point.json:D_ref",
+      "passed": true,
+      "actual": 0.24857515865461866,
+      "expected": 0.25,
+      "tolerance": 0.005
+    },
+    {
+      "name": "bs_brs_point.json:determinant_closure",
+      "passed": true,
+      "actual": -3.9968028886505635e-15,
+      "expected": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "br_brs_point.json:lambda1",
+      "passed": true,
+      "actual": 6.734333872760271,
+      "expected": 6.7343,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_point.json:lambda2",
+      "passed": true,
+      "actual": 1.4972196917055784,
+      "expected": 1.4972,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_point.json:det_ratio",
+      "passed": true,
+      "actual": 10.082777284816581,
+      "expected": 10.0828,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_point.json:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.1721243505469714,
+      "expected": 1.1721,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_point.json:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 3.345391157663174,
+      "expected": 3.345,
+      "tolerance": 0.005
+    },
+    {
+      "name": "br_brs_point.json:D_ref",
+      "passed": true,
+      "actual": 1.381691602654817,
+      "expected": 1.382,
+      "tolerance": 0.005
+    },
+    {
+      "name": "br_brs_point.json:determinant_closure",
+      "passed": true,
+      "actual": -1.4210854715202004e-14,
+      "expected": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "d3_d3brs_point.json:lambda1",
+      "passed": true,
+      "actual": 37.22034260312389,
+      "expected": 37.2203,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "d3_d3brs_point.json:lambda2",
+      "passed": true,
+      "actual": 7.061845515148338,
+      "expected": 7.06185,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "d3_d3brs_point.json:det_ratio",
+      "passed": true,
+      "actual": 262.84430948415513,
+      "expected": 262.8443,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "d3_d3brs_point.json:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.3256006011033636,
+      "expected": 1.3256,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "d3_d3brs_point.json:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 50.82098935572239,
+      "expected": 50.82,
+      "tolerance": 0.005
+    },
+    {
+      "name": "d3_d3brs_point.json:D_ref",
+      "passed": true,
+      "actual": 0.6986227253027694,
+      "expected": 0.699,
+      "tolerance": 0.005
+    },
+    {
+      "name": "d3_d3brs_point.json:determinant_closure",
+      "passed": true,
+      "actual": -5.684341886080802e-14,
+      "expected": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "D3:v2_weak_axis_angle_deg",
+      "passed": true,
+      "actual": 2.2349595064704415,
+      "expected": 2.23,
+      "tolerance": 0.005
+    },
+    {
+      "name": "BS_bootstrap:Lambda1_median",
+      "passed": true,
+      "actual": 3.142465431075,
+      "expected": 3.142,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:Lambda1_minus",
+      "passed": true,
+      "actual": 0.1006544071182005,
+      "expected": 0.101,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:Lambda1_plus",
+      "passed": true,
+      "actual": 0.11162977339939983,
+      "expected": 0.112,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:Lambda2_median",
+      "passed": true,
+      "actual": 1.0062985068549999,
+      "expected": 1.006,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:Lambda2_minus",
+      "passed": true,
+      "actual": 0.03282489916291986,
+      "expected": 0.033,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:Lambda2_plus",
+      "passed": true,
+      "actual": 0.03384262571300001,
+      "expected": 0.034,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:r_gain_median",
+      "passed": true,
+      "actual": 1.02272418172,
+      "expected": 1.023,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:r_gain_minus",
+      "passed": true,
+      "actual": 0.015266593756799951,
+      "expected": 0.015,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:r_gain_plus",
+      "passed": true,
+      "actual": 0.02519613927320008,
+      "expected": 0.025,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS_bootstrap:angle_median",
+      "passed": true,
+      "actual": 4.64512065517,
+      "expected": 4.65,
+      "tolerance": 0.005
+    },
+    {
+      "name": "BS_bootstrap:angle_minus",
+      "passed": true,
+      "actual": 0.26065893052760014,
+      "expected": 0.26,
+      "tolerance": 0.005
+    },
+    {
+      "name": "BS_bootstrap:angle_plus",
+      "passed": true,
+      "actual": 0.2733162888527998,
+      "expected": 0.27,
+      "tolerance": 0.005
+    },
+    {
+      "name": "BS_bootstrap:P_Lambda2_ge_1_percent",
+      "passed": true,
+      "actual": 56.89999999999999,
+      "expected": 56.9,
+      "tolerance": 0.05
+    },
+    {
+      "name": "BS_bootstrap:P_angle_lt_5_percent",
+      "passed": true,
+      "actual": 91.60000000000001,
+      "expected": 91.6,
+      "tolerance": 0.05
+    },
+    {
+      "name": "BS_bootstrap:P_angle_lt_10_percent",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "BS_bootstrap:P_angle_lt_45_percent",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "BS_bootstrap:corr",
+      "passed": true,
+      "actual": -0.20498518390006584,
+      "expected": -0.205,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:Lambda1_median",
+      "passed": true,
+      "actual": 6.718008817517298,
+      "expected": 6.718,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:Lambda1_minus",
+      "passed": true,
+      "actual": 0.20514470272406893,
+      "expected": 0.205,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:Lambda1_plus",
+      "passed": true,
+      "actual": 0.20896509990604795,
+      "expected": 0.209,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:Lambda2_median",
+      "passed": true,
+      "actual": 1.5003830498311044,
+      "expected": 1.5,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:Lambda2_minus",
+      "passed": true,
+      "actual": 0.053287521869511245,
+      "expected": 0.053,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:Lambda2_plus",
+      "passed": true,
+      "actual": 0.05368059706137873,
+      "expected": 0.054,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:r_gain_reported_median",
+      "passed": true,
+      "actual": 1.1738348235278218,
+      "expected": 1.174,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:r_gain_reported_minus",
+      "passed": true,
+      "actual": 0.01927165511621287,
+      "expected": 0.019,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:r_gain_reported_plus",
+      "passed": true,
+      "actual": 0.019538179183906434,
+      "expected": 0.02,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:delta_phi_weak_deg_median",
+      "passed": true,
+      "actual": 3.353316226090377,
+      "expected": 3.35,
+      "tolerance": 0.005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:delta_phi_weak_deg_minus",
+      "passed": true,
+      "actual": 0.1600239816876412,
+      "expected": 0.16,
+      "tolerance": 0.005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:delta_phi_weak_deg_plus",
+      "passed": true,
+      "actual": 0.15597345776257399,
+      "expected": 0.16,
+      "tolerance": 0.005
+    },
+    {
+      "name": "br_brs_directional_bootstrap:internal_checks",
+      "passed": true,
+      "actual": true,
+      "expected": true,
+      "tolerance": null
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:Lambda1_median",
+      "passed": true,
+      "actual": 37.34125439429584,
+      "expected": 37.341,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:Lambda1_minus",
+      "passed": true,
+      "actual": 1.1277531221356014,
+      "expected": 1.128,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:Lambda1_plus",
+      "passed": true,
+      "actual": 1.1736773108171121,
+      "expected": 1.174,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:Lambda2_median",
+      "passed": true,
+      "actual": 7.036291783185197,
+      "expected": 7.036,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:Lambda2_minus",
+      "passed": true,
+      "actual": 0.19972377160037613,
+      "expected": 0.2,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:Lambda2_plus",
+      "passed": true,
+      "actual": 0.2211955414331035,
+      "expected": 0.221,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:r_gain_reported_median",
+      "passed": true,
+      "actual": 1.3229901982767514,
+      "expected": 1.323,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:r_gain_reported_minus",
+      "passed": true,
+      "actual": 0.01257163432045294,
+      "expected": 0.013,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:r_gain_reported_plus",
+      "passed": true,
+      "actual": 0.016883767255251536,
+      "expected": 0.017,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:delta_phi_weak_deg_median",
+      "passed": true,
+      "actual": 50.84352762887691,
+      "expected": 50.84,
+      "tolerance": 0.005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:delta_phi_weak_deg_minus",
+      "passed": true,
+      "actual": 2.9699882125825496,
+      "expected": 2.97,
+      "tolerance": 0.005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:delta_phi_weak_deg_plus",
+      "passed": true,
+      "actual": 3.399827326074707,
+      "expected": 3.4,
+      "tolerance": 0.005
+    },
+    {
+      "name": "d3_d3brs_directional_bootstrap:internal_checks",
+      "passed": true,
+      "actual": true,
+      "expected": true,
+      "tolerance": null
+    },
+    {
+      "name": "BR_bootstrap:P_angle_lt_45_percent",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "D3_bootstrap:P_angle_lt_45_percent",
+      "passed": true,
+      "actual": 4.0,
+      "expected": 4.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "BR_bootstrap:P_angle_lt_5_percent",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "BR_bootstrap:P_angle_lt_10_percent",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "BR_bootstrap:P_Lambda2_ge_1_percent",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "D3_bootstrap:P_angle_lt_5_percent",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "D3_bootstrap:P_angle_lt_10_percent",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "D3_bootstrap:P_Lambda2_ge_1_percent",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "BR_bootstrap:corr",
+      "passed": true,
+      "actual": -0.10235675681276452,
+      "expected": -0.102,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_bootstrap:corr",
+      "passed": true,
+      "actual": 0.04821817795609051,
+      "expected": 0.048,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:internal_checks",
+      "passed": true,
+      "actual": true,
+      "expected": true,
+      "tolerance": null
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.05:reference_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9689575221836643,
+      "expected": 0.96896,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.05:new_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9999941491735779,
+      "expected": 0.999994,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.05:Lambda1",
+      "passed": true,
+      "actual": 2.965585656350552,
+      "expected": 2.9656,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.05:Lambda2",
+      "passed": true,
+      "actual": 1.0069927630042095,
+      "expected": 1.007,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.05:r_gain",
+      "passed": true,
+      "actual": 1.0071151053415786,
+      "expected": 1.0071,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.05:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 4.707292692308154,
+      "expected": 4.707,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.10:reference_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9383351363200156,
+      "expected": 0.93834,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.10:new_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9999784968113726,
+      "expected": 0.999978,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.10:Lambda1",
+      "passed": true,
+      "actual": 2.8355732815167713,
+      "expected": 2.8356,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.10:Lambda2",
+      "passed": true,
+      "actual": 1.009313679743514,
+      "expected": 1.0093,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.10:r_gain",
+      "passed": true,
+      "actual": 1.010147717946576,
+      "expected": 1.0101,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.10:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 4.909141912104365,
+      "expected": 4.909,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.20:reference_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.8705820000839707,
+      "expected": 0.87058,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.20:new_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9986107386574071,
+      "expected": 0.998611,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.20:Lambda1",
+      "passed": true,
+      "actual": 2.5882443926156293,
+      "expected": 2.5882,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.20:Lambda2",
+      "passed": true,
+      "actual": 1.017261477975981,
+      "expected": 1.0173,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.20:r_gain",
+      "passed": true,
+      "actual": 1.0217339842423687,
+      "expected": 1.0217,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "bs_brs_hard_prior_directional:w0+wa < -0.20:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 5.292044434136844,
+      "expected": 5.292,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_hard_prior_directional:internal_checks",
+      "passed": true,
+      "actual": true,
+      "expected": true,
+      "tolerance": null
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.05:reference_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9997834767561398,
+      "expected": 0.999783,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.05:new_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9999941491735779,
+      "expected": 0.999994,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.05:Lambda1",
+      "passed": true,
+      "actual": 6.721593880742812,
+      "expected": 6.7216,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.05:Lambda2",
+      "passed": true,
+      "actual": 1.4975293114600337,
+      "expected": 1.4975,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.05:r_gain",
+      "passed": true,
+      "actual": 1.1726076778940997,
+      "expected": 1.1726,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.05:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 3.3513543975776634,
+      "expected": 3.351,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.10:reference_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9995346507363233,
+      "expected": 0.999535,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.10:new_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9999784968113726,
+      "expected": 0.999978,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.10:Lambda1",
+      "passed": true,
+      "actual": 6.709657258722153,
+      "expected": 6.7097,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.10:Lambda2",
+      "passed": true,
+      "actual": 1.4975718200144679,
+      "expected": 1.4976,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.10:r_gain",
+      "passed": true,
+      "actual": 1.172977653967137,
+      "expected": 1.173,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.10:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 3.3564663904319807,
+      "expected": 3.356,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.20:reference_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9986643634211507,
+      "expected": 0.998664,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.20:new_retained_weight_fraction",
+      "passed": true,
+      "actual": 0.9986107386574071,
+      "expected": 0.998611,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.20:Lambda1",
+      "passed": true,
+      "actual": 6.720085657803224,
+      "expected": 6.7201,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.20:Lambda2",
+      "passed": true,
+      "actual": 1.4987698465875399,
+      "expected": 1.4988,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.20:r_gain",
+      "passed": true,
+      "actual": 1.1730765077301522,
+      "expected": 1.1731,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "br_brs_hard_prior_directional:w0+wa < -0.20:delta_phi_weak_deg",
+      "passed": true,
+      "actual": 3.360014874104273,
+      "expected": 3.36,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:full:lambda1",
+      "passed": true,
+      "actual": 37.22034260312389,
+      "expected": 37.22,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:full:lambda2",
+      "passed": true,
+      "actual": 7.061845515148338,
+      "expected": 7.062,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:full:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.3256006011033636,
+      "expected": 1.326,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.05:lambda1",
+      "passed": true,
+      "actual": 37.05902453921186,
+      "expected": 37.059,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.05:lambda2",
+      "passed": true,
+      "actual": 7.010551706742859,
+      "expected": 7.011,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.05:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.3243607870807532,
+      "expected": 1.324,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.1:lambda1",
+      "passed": true,
+      "actual": 36.78983424200863,
+      "expected": 36.79,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.1:lambda2",
+      "passed": true,
+      "actual": 6.926585982950089,
+      "expected": 6.927,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.1:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.3223489693934884,
+      "expected": 1.322,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.2:lambda1",
+      "passed": true,
+      "actual": 36.49114829675325,
+      "expected": 36.491,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.2:lambda2",
+      "passed": true,
+      "actual": 6.730079597278786,
+      "expected": 6.73,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:w0+wa<-0.2:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.3146988308503074,
+      "expected": 1.315,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:hpd_0.68:lambda1",
+      "passed": true,
+      "actual": 35.00858103643296,
+      "expected": 35.009,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:hpd_0.68:lambda2",
+      "passed": true,
+      "actual": 8.143418272919961,
+      "expected": 8.143,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3_robustness:hpd_0.68:r_gain_algebraic",
+      "passed": true,
+      "actual": 1.40234366245913,
+      "expected": 1.402,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "Table1:BR:samples",
+      "passed": true,
+      "actual": 8045.0,
+      "expected": 8045,
+      "tolerance": 0.0
+    },
+    {
+      "name": "Table1:BR:N_eff",
+      "passed": true,
+      "actual": 2964.714621247469,
+      "expected": 2964.7,
+      "tolerance": 0.05
+    },
+    {
+      "name": "Table1:BR:mean_w0",
+      "passed": true,
+      "actual": -0.7175109241157437,
+      "expected": -0.7175,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Table1:BR:mean_wa",
+      "passed": true,
+      "actual": -0.5941635711692755,
+      "expected": -0.5942,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Table1:BR:FoM",
+      "passed": true,
+      "actual": 18.73558638053946,
+      "expected": 18.74,
+      "tolerance": 0.005
+    },
+    {
+      "name": "Table1:BR:kappa",
+      "passed": true,
+      "actual": 83.24204992232727,
+      "expected": 83.2,
+      "tolerance": 0.05
+    },
+    {
+      "name": "Table1:BS:samples",
+      "passed": true,
+      "actual": 10110.0,
+      "expected": 10110,
+      "tolerance": 0.0
+    },
+    {
+      "name": "Table1:BS:N_eff",
+      "passed": true,
+      "actual": 2907.2603423115393,
+      "expected": 2907.3,
+      "tolerance": 0.05
+    },
+    {
+      "name": "Table1:BS:mean_w0",
+      "passed": true,
+      "actual": -0.9814355570653726,
+      "expected": -0.9814,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Table1:BS:mean_wa",
+      "passed": true,
+      "actual": 0.28193929419519587,
+      "expected": 0.2819,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Table1:BS:FoM",
+      "passed": true,
+      "actual": 33.409074125171664,
+      "expected": 33.41,
+      "tolerance": 0.005
+    },
+    {
+      "name": "Table1:BS:kappa",
+      "passed": true,
+      "actual": 67.21679435145256,
+      "expected": 67.2,
+      "tolerance": 0.05
+    },
+    {
+      "name": "Table1:BRS:samples",
+      "passed": true,
+      "actual": 11174.0,
+      "expected": 11174,
+      "tolerance": 0.0
+    },
+    {
+      "name": "Table1:BRS:N_eff",
+      "passed": true,
+      "actual": 3265.6615058413854,
+      "expected": 3265.7,
+      "tolerance": 0.05
+    },
+    {
+      "name": "Table1:BRS:mean_w0",
+      "passed": true,
+      "actual": -0.9726481908080357,
+      "expected": -0.9726,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Table1:BRS:mean_wa",
+      "passed": true,
+      "actual": 0.15994603532457508,
+      "expected": 0.1599,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Table1:BRS:FoM",
+      "passed": true,
+      "actual": 59.49183670560561,
+      "expected": 59.49,
+      "tolerance": 0.005
+    },
+    {
+      "name": "Table1:BRS:kappa",
+      "passed": true,
+      "actual": 59.23977709718266,
+      "expected": 59.2,
+      "tolerance": 0.05
+    },
+    {
+      "name": "covariance:BR",
+      "passed": true,
+      "actual": [
+        [
+          0.03548940947029025,
+          -0.11567907142634155
+        ],
+        [
+          -0.11567907142634155,
+          0.457332778976437
+        ]
+      ],
+      "expected": [
+        [
+          0.035489,
+          -0.115679
+        ],
+        [
+          -0.115679,
+          0.457333
+        ]
+      ],
+      "tolerance": 5e-07
+    },
+    {
+      "name": "covariance:BS",
+      "passed": true,
+      "actual": [
+        [
+          0.005444563865388831,
+          -0.020746226205302275
+        ],
+        [
+          -0.020746226205302275,
+          0.2436062519942494
+        ]
+      ],
+      "expected": [
+        [
+          0.005445,
+          -0.020746
+        ],
+        [
+          -0.020746,
+          0.243606
+        ]
+      ],
+      "tolerance": 5e-07
+    },
+    {
+      "name": "covariance:BRS",
+      "passed": true,
+      "actual": [
+        [
+          0.005405070713666343,
+          -0.019983126409474722
+        ],
+        [
+          -0.019983126409474722,
+          0.12615353773672097
+        ]
+      ],
+      "expected": [
+        [
+          0.005405,
+          -0.019983
+        ],
+        [
+          -0.019983,
+          0.126154
+        ]
+      ],
+      "tolerance": 5e-07
+    },
+    {
+      "name": "covariance:D3",
+      "passed": true,
+      "actual": [
+        [
+          0.10127481697059429,
+          -0.21995641116433068
+        ],
+        [
+          -0.21995641116433068,
+          1.120122854344467
+        ]
+      ],
+      "expected": [
+        [
+          0.101275,
+          -0.219956
+        ],
+        [
+          -0.219956,
+          1.120123
+        ]
+      ],
+      "tolerance": 5e-07
+    },
+    {
+      "name": "covariance:D3+BRS",
+      "passed": true,
+      "actual": [
+        [
+          0.006214314117390358,
+          -0.026916195857747165
+        ],
+        [
+          -0.026916195857747165,
+          0.15641345237037116
+        ]
+      ],
+      "expected": [
+        [
+          0.006214,
+          -0.026916
+        ],
+        [
+          -0.026916,
+          0.156413
+        ]
+      ],
+      "tolerance": 5e-07
+    },
+    {
+      "name": "D3:N_eff_ref",
+      "passed": true,
+      "actual": 5881.149927917273,
+      "expected": 5881.15,
+      "tolerance": 0.005
+    },
+    {
+      "name": "D3:N_eff_new",
+      "passed": true,
+      "actual": 3114.6412945449115,
+      "expected": 3114.64,
+      "tolerance": 0.005
+    },
+    {
+      "name": "D3:kappa_ref",
+      "passed": true,
+      "actual": 20.882110626856807,
+      "expected": 20.88,
+      "tolerance": 0.005
+    },
+    {
+      "name": "D3:kappa_new",
+      "passed": true,
+      "actual": 104.84127336067225,
+      "expected": 104.84,
+      "tolerance": 0.005
+    },
+    {
+      "name": "D3:ordinary_axis_ratio_ref",
+      "passed": true,
+      "actual": 0.0478878796242887,
+      "expected": 0.04789,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "D3:ordinary_axis_ratio_new",
+      "passed": true,
+      "actual": 0.009538228294498324,
+      "expected": 0.00954,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "D3:v1_up_to_sign",
+      "passed": true,
+      "actual": 4.6258009160082825e-06,
+      "expected": 0.0,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "D3:v2_up_to_sign",
+      "passed": true,
+      "actual": 1.7610767188980248e-06,
+      "expected": 0.0,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "D3:e_major_up_to_sign",
+      "passed": true,
+      "actual": 4.9207889037949926e-06,
+      "expected": 0.0,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "D3:e_minor_up_to_sign",
+      "passed": true,
+      "actual": 4.9207889037949926e-06,
+      "expected": 0.0,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "D3:v1_strong_axis_angle",
+      "passed": true,
+      "actual": 39.17901064427763,
+      "expected": 39.18,
+      "tolerance": 0.005
+    },
+    {
+      "name": "D3:v2_strong_axis_angle",
+      "passed": true,
+      "actual": 87.76504049352924,
+      "expected": 87.77,
+      "tolerance": 0.005
+    },
+    {
+      "name": "D3:delta_mu_w0",
+      "passed": true,
+      "actual": -0.16661202153510235,
+      "expected": -0.16661,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "D3:delta_mu_wa",
+      "passed": true,
+      "actual": 0.7326124725942273,
+      "expected": 0.73261,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "BS:delta1",
+      "passed": true,
+      "actual": 2.149890425439903,
+      "expected": 2.1499,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "BS:delta2",
+      "passed": true,
+      "actual": 0.0066776529773990845,
+      "expected": 0.0067,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "BS:radial_width_factor",
+      "passed": true,
+      "actual": 0.5634459698001536,
+      "expected": 0.56,
+      "tolerance": 0.005
+    },
+    {
+      "name": "BS:weak_axis_w0_up_to_sign",
+      "passed": true,
+      "actual": 0.08613734008238486,
+      "expected": 0.086,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS:weak_axis_wa_up_to_sign",
+      "passed": true,
+      "actual": 0.9962832722893281,
+      "expected": 0.996,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BS:strongest_cut_retained_weight_percent",
+      "passed": true,
+      "actual": 87.05820000839707,
+      "expected": 87.1,
+      "tolerance": 0.05
+    },
+    {
+      "name": "BS:strongest_cut_angle_change_deg",
+      "passed": true,
+      "actual": 0.6599912876108966,
+      "expected": 0.66,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "BR:strongest_cut_retained_weight_above_99p8_percent",
+      "passed": true,
+      "actual": 99.86643634211507,
+      "expected": ">99.8",
+      "tolerance": null
+    },
+    {
+      "name": "D3:local_N_eff_ref",
+      "passed": true,
+      "actual": 2.82286020140975,
+      "expected": 2.8229,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "D3:local_N_eff_new",
+      "passed": true,
+      "actual": 9.331702868324927,
+      "expected": 9.3317,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "D3:local_bootstrap_Lambda2_q025",
+      "passed": true,
+      "actual": 0.03093550877602648,
+      "expected": 0.031,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3:local_bootstrap_Lambda2_q975",
+      "passed": true,
+      "actual": 1.8252248157424475,
+      "expected": 1.825,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "D3:local_bootstrap_repetitions",
+      "passed": true,
+      "actual": 20000.0,
+      "expected": 20000,
+      "tolerance": 0.0
+    },
+    {
+      "name": "BRS_to_D3BRS:Lambda1",
+      "passed": true,
+      "actual": 1.448950694731415,
+      "expected": 1.45,
+      "tolerance": 0.005
+    },
+    {
+      "name": "BRS_to_D3BRS:Lambda2",
+      "passed": true,
+      "actual": 0.7878074226597304,
+      "expected": 0.79,
+      "tolerance": 0.005
+    },
+    {
+      "name": "BRS_to_D3BRS:determinant_gain",
+      "passed": true,
+      "actual": 1.1414941123773805,
+      "expected": 1.14,
+      "tolerance": 0.005
+    },
+    {
+      "name": "synthetic:Lambda1",
+      "passed": true,
+      "actual": 9.990717157020178,
+      "expected": 9.990717157020178,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "synthetic:Lambda2",
+      "passed": true,
+      "actual": 4.997205887416219,
+      "expected": 4.997205887416219,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "synthetic:determinant_ratio",
+      "passed": true,
+      "actual": 49.925670596571464,
+      "expected": 49.925670596571464,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "synthetic:r_gain",
+      "passed": true,
+      "actual": 1.7424337629753992,
+      "expected": 1.7424337629753992,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "synthetic:N_eff_ref",
+      "passed": true,
+      "actual": 884973.3591494124,
+      "expected": 884973.3591494124,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "synthetic:N_eff_new",
+      "passed": true,
+      "actual": 884685.4314052031,
+      "expected": 884685.4314052031,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "synthetic:analytic_targets",
+      "passed": true,
+      "actual": {
+        "F_ref": [
+          [
+            100.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "F_new": [
+          [
+            1000.0,
+            0.0
+          ],
+          [
+            0.0,
+            5.0
+          ]
+        ],
+        "C_ref": [
+          [
+            0.01,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "C_new": [
+          [
+            0.001,
+            0.0
+          ],
+          [
+            0.0,
+            0.2
+          ]
+        ],
+        "generalized_eigenvalues": [
+          10.0,
+          5.0
+        ],
+        "determinant_ratio": 50.0,
+        "r_gain": 1.7422680412371134
+      },
+      "expected": {
+        "Lambda": [
+          10.0,
+          5.0
+        ],
+        "determinant_ratio": 50.0
+      },
+      "tolerance": null
+    },
+    {
+      "name": "synthetic:12_of_12",
+      "passed": true,
+      "actual": {
+        "passed": 12,
+        "total": 12,
+        "all_passed": true
+      },
+      "expected": {
+        "passed": 12,
+        "total": 12,
+        "all_passed": true
+      },
+      "tolerance": null
+    },
+    {
+      "name": "public_D3:z_p",
+      "passed": true,
+      "actual": 0.24435082292921395,
+      "expected": 0.24435,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "public_D3:Q_0.05_w0",
+      "passed": true,
+      "actual": -1.3984674948754223,
+      "expected": -1.39847,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "public_D3:determinant_closure_relative_error",
+      "passed": true,
+      "actual": 1.0813134774035134e-15,
+      "expected": 1.1e-15,
+      "tolerance": 5e-17
+    },
+    {
+      "name": "public_D3:boundary_weight_within_0p1_percent",
+      "passed": true,
+      "actual": 0.5063330647474201,
+      "expected": 0.506,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "Figure1:replacement_status",
+      "passed": true,
+      "actual": "reconstructed replacement; original historical plotting script not retained",
+      "expected": "reconstructed replacement; original historical plotting script not retained",
+      "tolerance": null
+    },
+    {
+      "name": "Figure1:Lambda1",
+      "passed": true,
+      "actual": 3.149890425439903,
+      "expected": 3.1499,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Figure1:Lambda2",
+      "passed": true,
+      "actual": 1.006677652977399,
+      "expected": 1.0067,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Figure1:v1_angle",
+      "passed": true,
+      "actual": 4.632053146525948,
+      "expected": 4.632,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "Figure1:hash",
+      "passed": true,
+      "actual": "5997bedf2957b802274f6cd86a27631e69f3545ac2ebc4aa03f675bc3112e1f8",
+      "expected": "5997bedf2957b802274f6cd86a27631e69f3545ac2ebc4aa03f675bc3112e1f8",
+      "tolerance": null
+    },
+    {
+      "name": "Figure2:replacement_status",
+      "passed": true,
+      "actual": "reconstructed replacement; original historical plotting script not retained",
+      "expected": "reconstructed replacement; original historical plotting script not retained",
+      "tolerance": null
+    },
+    {
+      "name": "Figure2:Lambda1",
+      "passed": true,
+      "actual": 6.734333872760271,
+      "expected": 6.7343,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Figure2:Lambda2",
+      "passed": true,
+      "actual": 1.4972196917055784,
+      "expected": 1.4972,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Figure2:v1_angle",
+      "passed": true,
+      "actual": 3.345391157663174,
+      "expected": 3.345,
+      "tolerance": 0.0005
+    },
+    {
+      "name": "Figure2:hash",
+      "passed": true,
+      "actual": "3787fcbd152cee1d1341c27c1fac381953ea51be2f47bdc3ca0cb0af70d2bb19",
+      "expected": "3787fcbd152cee1d1341c27c1fac381953ea51be2f47bdc3ca0cb0af70d2bb19",
+      "tolerance": null
+    },
+    {
+      "name": "Figure3:Lambda1",
+      "passed": true,
+      "actual": 37.22034260312389,
+      "expected": 37.2203,
+      "tolerance": 5e-05
+    },
+    {
+      "name": "Figure3:Lambda2",
+      "passed": true,
+      "actual": 7.061845515148338,
+      "expected": 7.06185,
+      "tolerance": 5e-06
+    },
+    {
+      "name": "Figure3:v1_angle",
+      "passed": true,
+      "actual": 50.82098935572239,
+      "expected": 50.82,
+      "tolerance": 0.005
+    },
+    {
+      "name": "Figure3:v2_angle",
+      "passed": true,
+      "actual": 2.2349595064704415,
+      "expected": 2.23,
+      "tolerance": 0.005
+    },
+    {
+      "name": "Figure3:hash",
+      "passed": true,
+      "actual": "39cd2ea8a175fc62da9cb6fc8d27f8874bbaaaf26d0789be357b35cab4613374",
+      "expected": "39cd2ea8a175fc62da9cb6fc8d27f8874bbaaaf26d0789be357b35cab4613374",
+      "tolerance": null
+    },
+    {
+      "name": "provenance:external_hashes",
+      "passed": true,
+      "actual": "all present",
+      "expected": "all present",
+      "tolerance": null
+    },
+    {
+      "name": "provenance:no_raw_historical_chains",
+      "passed": true,
+      "actual": [],
+      "expected": [],
+      "tolerance": null
+    },
+    {
+      "name": "provenance:portable_D3_input_identifiers",
+      "passed": true,
+      "actual": [
+        [
+          "d3_w0wa_nla_realy3dat.txt",
+          "d3_brs_w0wa_nla_realy3dat.txt"
+        ],
+        [
+          "d3_brs_w0wa_nla_realy3dat.txt"
+        ],
+        [
+          "d3_w0wa_nla_realy3dat.txt",
+          "d3_brs_w0wa_nla_realy3dat.txt"
+        ],
+        [
+          "d3_w0wa_nla_realy3dat.txt",
+          "d3_brs_w0wa_nla_realy3dat.txt"
+        ],
+        [
+          "d3_w0wa_nla_realy3dat.txt",
+          "d3_brs_w0wa_nla_realy3dat.txt"
+        ],
+        [
+          "d3_w0wa_nla_realy3dat.txt",
+          "d3_brs_w0wa_nla_realy3dat.txt"
+        ],
+        [
+          "d3_w0wa_nla_realy3dat.txt",
+          "d3_brs_w0wa_nla_realy3dat.txt"
+        ]
+      ],
+      "expected": "portable basenames without parent-repository paths",
+      "tolerance": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+BS -> BRS expanded multiplier bootstrap (v07.2)
+
+nboot = 1000
+seed = 20260904
+BS samples = 9026
+BRS samples = 10093
+
+Full-chain point values:
+  Lambda1 = 3.14989043
+  Lambda2 = 1.00667765
+  r_gain = 1.00621203
+  Delta phi_weak = 4.632053 deg
+  Delta phi_strong = 85.367947 deg
+
+Bootstrap 16/50/84:
+  Lambda1 = 3.04181102 / 3.14246543 / 3.25409520
+  Lambda2 = 0.97347361 / 1.00629851 / 1.04014113
+  r_gain | Lambda2>=1 = 1.00745759 / 1.02272418 / 1.04792032
+  Delta phi_weak = 4.384462 / 4.645121 / 4.918437 deg
+
+Fractions:
+  Lambda2 >= 1 = 56.90%
+  Delta phi_weak < 5 deg = 91.60%
+  Delta phi_weak < 10 deg = 100.00%
+  Delta phi_weak < 45 deg = 100.00%
+  Delta phi_weak < Delta phi_strong = 100.00%
+  Corr(Lambda1, Delta phi_weak) = -0.20499

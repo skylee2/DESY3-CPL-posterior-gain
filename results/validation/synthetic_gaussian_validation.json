@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "description": "Sole standalone manuscript-v3 synthetic validation in release candidate v1.1.0; earlier undocumented validation attempts are superseded.",
+  "software": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "rng": {
+    "seed": 20260907,
+    "bit_generator": "PCG64",
+    "stream_construction": "numpy.random.SeedSequence(seed).spawn(4)",
+    "spawn_order": [
+      "reference_samples",
+      "new_samples",
+      "reference_weights",
+      "new_weights"
+    ]
+  },
+  "sample_sizes": {
+    "reference": 1000000,
+    "new": 1000000
+  },
+  "means": {
+    "reference": [
+      0.0,
+      0.0
+    ],
+    "new": [
+      0.0,
+      0.0
+    ]
+  },
+  "analytic": {
+    "F_ref": [
+      [
+        100.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "F_new": [
+      [
+        1000.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0
+      ]
+    ],
+    "C_ref": [
+      [
+        0.01,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "C_new": [
+      [
+        0.001,
+        0.0
+      ],
+      [
+        0.0,
+        0.2
+      ]
+    ],
+    "generalized_eigenvalues": [
+      10.0,
+      5.0
+    ],
+    "determinant_ratio": 50.0,
+    "r_gain": 1.7422680412371134
+  },
+  "weights": {
+    "prescription": "raw_w[i] = exp(0.35*z[i] - 0.5*0.35^2), z[i] iid N(0,1), independently generated for each posterior and independently of samples; normalized_w = raw_w/sum(raw_w)",
+    "lognormal_sigma": 0.35,
+    "normalized_weight_sums": {
+      "reference": 1.0,
+      "new": 0.9999999999999998
+    },
+    "normalized_weight_ranges": {
+      "reference": [
+        1.4928473235616746e-07,
+        5.17754580747357e-06
+      ],
+      "new": [
+        1.7700228587174877e-07,
+        4.955660863284103e-06
+      ]
+    },
+    "normalized_weight_float64_sha256": {
+      "reference": "f880947b39662e025eeb75a8b8b9e168ee8fb94ca1226d4531095155aa6e9e1d",
+      "new": "caa4c3f661f5adc9a6b7242bd6daba26ba4780cc8cf407c1c8b933a1cf6db5e4"
+    },
+    "effective_sample_size_definition": "1/sum(normalized_w^2)",
+    "effective_sample_sizes": {
+      "reference": 884973.3591494124,
+      "new": 884685.4314052031
+    }
+  },
+  "production_pipeline": [
+    "analysis.weighted_stats.weighted_covariance(normalization='population')",
+    "analysis.information_modes.fisher_from_covariance",
+    "analysis.generalized_modes.generalized_eigensystem",
+    "analysis.generalized_modes.determinant_identity",
+    "analysis.generalized_modes.incremental_gain_diagnostics"
+  ],
+  "estimated": {
+    "C_ref": [
+      [
+        0.010004376014556183,
+        -0.0002519235455996845
+      ],
+      [
+        -0.0002519235455996845,
+        0.9995576107294789
+      ]
+    ],
+    "C_new": [
+      [
+        0.001001370751408991,
+        -6.2537849362222205e-06
+      ],
+      [
+        -6.2537849362222205e-06,
+        0.2000213508583845
+      ]
+    ],
+    "F_ref": [
+      [
+        99.95689337987557,
+        0.02519263994099388
+      ],
+      [
+        0.025192639940993883,
+        1.000448934493501
+      ]
+    ],
+    "F_new": [
+      [
+        998.6313199717273,
+        0.031222794361090645
+      ],
+      [
+        0.03122279436109064,
+        4.999467261715691
+      ]
+    ],
+    "Lambda1": 9.990717157020178,
+    "Lambda2": 4.997205887416219,
+    "generalized_eigenvalues": [
+      9.990717157020178,
+      4.997205887416219
+    ],
+    "generalized_eigenvalue_product": 49.925670596571464,
+    "determinant_ratio": 49.925670596571464,
+    "covariance_determinant_ratio": 49.925670596571464,
+    "r_gain": 1.7424337629753992,
+    "N_eff_ref": 884973.3591494124,
+    "N_eff_new": 884685.4314052031,
+    "seed": 20260907,
+    "N_ref": 1000000,
+    "N_new": 1000000
+  },
+  "tolerances": {
+    "covariance_relative_frobenius": 0.005,
+    "generalized_eigenvalue_relative": 0.0075,
+    "determinant_ratio_relative": 0.01,
+    "r_gain_absolute": 0.005
+  },
+  "tests": [
+    {
+      "name": "analytic_covariances_are_matrix_inverses",
+      "passed": true,
+      "absolute_tolerance": 1e-14
+    },
+    {
+      "name": "analytic_generalized_eigenvalues",
+      "passed": true,
+      "measured": [
+        10.0,
+        5.0
+      ],
+      "target": [
+        10.0,
+        5.0
+      ],
+      "absolute_tolerance": 1e-13
+    },
+    {
+      "name": "reference_weights_normalized",
+      "passed": true,
+      "measured_sum": 1.0,
+      "target": 1.0,
+      "absolute_tolerance": 5e-15
+    },
+    {
+      "name": "new_weights_normalized",
+      "passed": true,
+      "measured_sum": 0.9999999999999998,
+      "target": 1.0,
+      "absolute_tolerance": 5e-15
+    },
+    {
+      "name": "synthetic_weights_are_nonuniform",
+      "passed": true,
+      "reference_raw_weight_range": [
+        0.14927094473059074,
+        5.177067620174219
+      ],
+      "new_raw_weight_range": [
+        0.1769813317431778,
+        4.955074195409324
+      ]
+    },
+    {
+      "name": "effective_sample_sizes_are_valid",
+      "passed": true,
+      "measured": {
+        "reference": 884973.3591494124,
+        "new": 884685.4314052031
+      },
+      "required_ranges": {
+        "reference": [
+          1.0,
+          1000000
+        ],
+        "new": [
+          1.0,
+          1000000
+        ]
+      }
+    },
+    {
+      "name": "reference_weighted_covariance",
+      "passed": true,
+      "measured_relative_frobenius_error": 0.0005680018479025322,
+      "tolerance": 0.005
+    },
+    {
+      "name": "new_weighted_covariance",
+      "passed": true,
+      "measured_relative_frobenius_error": 0.00011575236138273335,
+      "tolerance": 0.005
+    },
+    {
+      "name": "sample_generalized_eigenvalues",
+      "passed": true,
+      "measured": [
+        9.990717157020178,
+        4.997205887416219
+      ],
+      "target": [
+        10.0,
+        5.0
+      ],
+      "relative_tolerance": 0.0075
+    },
+    {
+      "name": "production_determinant_closure",
+      "passed": true,
+      "generalized_product": 49.925670596571464,
+      "information_determinant_ratio": 49.925670596571464,
+      "measured_relative_error": 0.0,
+      "production_relative_tolerance": 1e-08,
+      "production_absolute_tolerance": 1e-10
+    },
+    {
+      "name": "sample_determinant_ratio",
+      "passed": true,
+      "measured": 49.925670596571464,
+      "target": 50.0,
+      "relative_tolerance": 0.01
+    },
+    {
+      "name": "sample_r_gain",
+      "passed": true,
+      "measured": 1.7424337629753992,
+      "target": 1.7422680412371134,
+      "absolute_tolerance": 0.005
+    }
+  ],
+  "test_summary": {
+    "passed": 12,
+    "total": 12,
+    "all_passed": true
+  }
+}

@@ -1,0 +1,23 @@
+BR -> BRS directional weighted-multiplier bootstrap
+
+nboot = 1000
+seed = 20260904
+reference samples = 8045
+new samples = 11174
+
+Bootstrap 16/50/84:
+  Lambda1 = 6.5128641148 / 6.7180088175 / 6.9269739174
+  Lambda2 = 1.4470955280 / 1.5003830498 / 1.5540636469
+  r_gain (unconditional) = 1.1545631684 / 1.1738348235 / 1.1933730027
+  Delta phi_weak = 3.1932922444 / 3.3533162261 / 3.5092896839 deg
+  Delta phi_strong = 86.4907103161 / 86.6466837739 / 86.8067077556 deg
+
+Fractions and counts:
+  Lambda2 >= 1 = 100.00% (1000/1000)
+  delta_phi_weak_lt_5deg = 100.00% (1000/1000)
+  delta_phi_weak_lt_10deg = 100.00% (1000/1000)
+  delta_phi_weak_lt_45deg = 100.00% (1000/1000)
+  delta_phi_weak_lt_delta_phi_strong = 100.00% (1000/1000)
+  Corr(Lambda1, Delta phi_weak) = -0.10235676
+
+All internal checks passed = True

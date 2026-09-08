@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_point_result": "results/points/d3_d3brs_point.json",
+  "output_figure": "figures/fig2_D3_to_D3BRS_geometry_v06.pdf",
+  "interpretation": "dominant v1 is not weak-axis aligned; subdominant v2 is weak-axis aligned",
+  "Lambda1": 37.22034260312389,
+  "Lambda2": 7.061845515148338,
+  "v1_weak_axis_angle_deg": 50.82098935572239,
+  "v2_weak_axis_angle_deg": 2.2349595064704415,
+  "figure_sha256": "39cd2ea8a175fc62da9cb6fc8d27f8874bbaaaf26d0789be357b35cab4613374"
+}

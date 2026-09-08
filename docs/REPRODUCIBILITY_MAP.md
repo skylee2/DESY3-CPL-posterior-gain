@@ -1,21 +1,25 @@
-# Manuscript-to-code reproducibility map
+# Reproducibility map
 
-Commands are run from the package root. `BR`, `BS`, `BRS`, `D3`, and `D3_BRS` below denote user-supplied local chain paths; no chain is included.
+| Manuscript-facing item | Script | Machine-readable output |
+|---|---|---|
+| BS -> BRS point values | `scripts/paper1_y3_reproduce.py point` | `results/points/bs_brs_point.json` |
+| BR -> BRS point values | same | `results/points/br_brs_point.json` |
+| D3 -> D3+BRS point values | same | `results/points/d3_d3brs_point.json` |
+| Reverse BRS -> D3+BRS appendix check | same | `results/points/brs_d3brs_point.json` |
+| BS bootstrap | `scripts/production/bs_brs_bootstrap_v072.py` | `results/bootstrap/bs_brs_bootstrap_v072.csv` and summary |
+| BR bootstrap | `scripts/bootstrap_directional_diagnostics.py` | `results/bootstrap/br_brs_directional_bootstrap.{csv,json}` |
+| D3 bootstrap | same | `results/bootstrap/d3_d3brs_directional_bootstrap.{csv,json}` |
+| BS and BR hard-prior checks | `scripts/hard_prior_directional_robustness.py` | `results/robustness/*_hard_prior_directional.{csv,json}` |
+| D3 hard-prior and HPD checks | `scripts/paper1_y3_reproduce.py robustness` | `results/robustness/d3_d3brs_robustness.json` |
+| D3 public-chain closure | `scripts/production/d3_stage1/analysis/run_y3_stage1.py` | `results/production/d3_stage1/*.json` |
+| Synthetic Gaussian validation | `scripts/validate_synthetic_gaussian.py` | `results/validation/synthetic_gaussian_validation.json` |
+| Figure 1: BS -> BRS geometry | `scripts/generate_figure1.py` (reconstructed replacement; original historical plotter not retained) | `figures/fig_BS_to_BRS_geometry_v07.pdf` plus `results/validation/figure1_metadata.json` |
+| Figure 2: BR -> BRS geometry | `scripts/generate_figure2.py` (reconstructed replacement; original historical plotter not retained) | `figures/fig1_BR_to_BRS_geometry_v06.pdf` plus `results/validation/figure2_metadata.json` |
+| Figure 3 | `scripts/generate_figure3.py` | PDF plus `results/validation/figure3_metadata.json` |
+| Complete v3 audit, including Tables 1--3 and supporting appendix values | `scripts/verify_v3_release.py` | `results/validation/v3_release_audit.json` |
 
-| Manuscript item | Scientific content | Inputs | Script | Archived output | Reproduction command | Status |
-|---|---|---|---|---|---|---|
-| Table 1 | BR/BS/BRS rows, ESS, means, FoM, covariance condition numbers | BR, BS, BRS | `scripts/paper1_y3_reproduce.py` | BS/BRS point values in v07.2 summary; no complete historical table output located | run `point BR BRS` and `point BS BRS` | CLEAN REPRODUCER COVERS RESULT; historical production-summary gap is non-blocking |
-| Table 2 | BS/BRS multiplier-bootstrap diagnostics | BS, BRS | `scripts/production/bs_brs_bootstrap_v072.py`; clean implementation in `paper1_y3_reproduce.py` | `results/bs_brs_bootstrap_v072.csv`, `results/bs_brs_bootstrap_summary_v072.txt` | `python scripts/paper1_y3_reproduce.py bootstrap BS BRS --nboot 1000 --seed 20260904 --csv OUT.csv --output OUT.json` | COMPLETE for production provenance; clean statistical reproduction available |
-| Table 3 | D3/D3+BRS hard-boundary and HPD robustness | D3, D3_BRS | original `scripts/production/d3_stage1/analysis/run_y3_stage1.py`; clean `scripts/paper1_y3_reproduce.py` | `results/d3_stage1/stage1_validation.json`, `stage1_summary.md`, and supporting closure outputs | clean command: `python scripts/paper1_y3_reproduce.py robustness D3 D3_BRS --hpd --hpd-mass 0.68 --output OUT.json` | ORIGINAL SCRIPT AND PRODUCTION ARTIFACT FOUND; CLEAN REPRODUCER COVERS RESULT |
-| Table 4 | Historical external-chain run metadata | chain headers/configuration and DES-team provenance | no generator required | `input/external_chain_SHA256SUMS.txt`; author provenance confirmation | verify authorized chains against checksum record | PROVENANCE RESOLVED; raw chains intentionally external |
-| Figure 1 | BS/BRS covariance geometry and dominant-gain alignment | BS/BRS covariance results | exact plotting script not located | `figures/fig_BS_to_BRS_geometry_v07.pdf` | point quantities: `python scripts/paper1_y3_reproduce.py point BS BRS`; exact figure regeneration unavailable | GENERATOR NOT LOCATED; underlying numbers publicly reproducible; non-blocking |
-| Figure 2 | BR/BRS reference-reversed geometry | BR, BRS | exact plotting script not located | `figures/fig1_BR_to_BRS_geometry_v06.pdf` | point quantities: `python scripts/paper1_y3_reproduce.py point BR BRS`; exact figure regeneration unavailable | GENERATOR NOT LOCATED; underlying numbers publicly reproducible; non-blocking |
-| Figure 3 | D3/D3+BRS covariance geometry | D3, D3_BRS | exact plotting script not located | `figures/fig2_D3_to_D3BRS_geometry_v06.pdf`; D3 production JSON contains plotted numerical geometry | point quantities: `python scripts/paper1_y3_reproduce.py point D3 D3_BRS`; exact figure regeneration unavailable | GENERATOR NOT LOCATED; underlying numbers and production artifact retained; non-blocking |
-| Appendix A | generalized Rayleigh quotient, determinant closure, radial-width interpretation | printed covariance matrices | `scripts/check_published_covariances.py` for numerical closure | `results/check_published_covariances_output.txt` | `python scripts/check_published_covariances.py` | VALIDATION ONLY |
-| Appendix B | BRS $\to$ D3+BRS reciprocal point diagnostic | BRS, D3_BRS | generic `point` command can calculate a pair | none located | `python scripts/paper1_y3_reproduce.py point BRS D3_BRS --label "BRS -> D3+BRS"` | PARTIAL; exact production artifact not located |
-| Appendix C | chain metadata and SHA256 provenance | authorized external chains and public D3 chains | no numerical generator needed for hashes | `input/external_chain_SHA256SUMS.txt`, `input/public_d3_chain_SHA256SUMS.txt` | run the applicable `shasum -a 256 -c` record from the chain directory | COMPLETE provenance records; author sign-off resolved; raw chains intentionally external |
-| Appendix D | invariance of generalized eigenvalues | printed matrices / analytic statement | `scripts/check_published_covariances.py` exercises the generalized problem | printed-covariance output | `python scripts/check_published_covariances.py` | VALIDATION ONLY |
+The files under `results/production/` preserve adopted production artifacts. The parallel `points`, `bootstrap`, `robustness`, and `validation` directories hold cleanly regenerated, audit-facing products. Internal version strings such as `v072` identify the adopted method implementation; they are not manuscript-version claims.
 
-The targeted search covered project-authored Python/notebook content, exact output filenames, covariance constants, figure labels, `savefig` calls, and archived result paths. The sole other plotting module, `analysis/make_figures.py`, is explicitly development-mock-only, writes different filenames, and contains no manuscript covariance inputs; it is not an exact or high-confidence generator. Accordingly, all three figures are classified **GENERATOR NOT LOCATED**. The final PDFs remain hash-verified, and their underlying numerical content is independently reproducible; exact historical plotting provenance is a documented non-blocking gap.
+Input filename fields in machine-readable results are portable basename identifiers, not paths relative to the release directory. Raw chains remain outside the package; callers supply their verified local locations as command-line arguments.
 
-Production provenance and public reproducibility are tracked separately. The D3 production driver/output have now been archived, while Table 1 and BR/BRS remain publicly reproducible through the clean script despite missing complete historical production summaries.
+The Figure 1 and Figure 2 replacements consume only `results/points/bs_brs_point.json` and `results/points/br_brs_point.json`, respectively. They recompute the displayed native-coordinate angle from the packaged vectors, draw the 68% and 95% Gaussian-equivalent covariance ellipses from the packaged covariance matrices, and do not read or redistribute raw chain files. They reproduce the validated scientific geometry and manuscript-facing numerical labels, not the byte-level rendering history of the unavailable original plotters.

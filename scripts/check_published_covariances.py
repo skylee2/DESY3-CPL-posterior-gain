@@ -2,8 +2,8 @@
 """
 check_published_covariances.py
 
-Independent deterministic check using only the covariance matrices printed
-in paper1_Y3_v09_final.tex. Because those matrices are rounded to 6 decimals,
+Independent deterministic check using only the covariance matrices printed in
+paper1_Y3_submission_finaljournal_v3.tex. Because those matrices are rounded to 6 decimals,
 the result is expected to agree with, but not reproduce every last digit of,
 the full-chain values.
 

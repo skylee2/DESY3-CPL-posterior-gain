@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "label": "D3 -> D3+BRS",
+  "method": "independent exponential weighted-multiplier bootstrap",
+  "definitions": {
+    "reference": "first input chain; its resampled covariance defines the weak/strong axes",
+    "weights": "stored normalized posterior weights multiplied by iid Exponential(scale=1) variates separately for reference and new chains",
+    "weak_axis": "oriented eigenvector of the largest eigenvalue of each resampled reference covariance",
+    "angles": "acute Euclidean angles in native (w0, wa) coordinates",
+    "r_gain": "((Lambda1-1)+(Lambda2-1))^2 / ((Lambda1-1)^2+(Lambda2-1)^2)"
+  },
+  "inputs": {
+    "reference_file": "d3_w0wa_nla_realy3dat.txt",
+    "new_file": "d3_brs_w0wa_nla_realy3dat.txt",
+    "reference_sha256": "bfb3a9b499b61a36faabb47a197cd89fd11be75b6d48d56c1bcf98ecdf0e4760",
+    "new_sha256": "b3d922087c9de090319c8de99744a6e4a59d85ae1142a6d5065149d100ae363e",
+    "reference_retained_samples": 20671,
+    "new_retained_samples": 12468
+  },
+  "nboot": 400,
+  "seed": 220705766,
+  "point": {
+    "Lambda1": 37.22034260312389,
+    "Lambda2": 7.061845515148338,
+    "r_gain": 1.3256006011033636,
+    "weak_axis": [
+      -0.20238962876429398,
+      0.9793050792110962
+    ],
+    "delta_phi_weak_deg": 50.82098935572239,
+    "delta_phi_strong_deg": 39.17901064427763
+  },
+  "bootstrap_16_50_84": {
+    "Lambda1": {
+      "median": 37.34125439429584,
+      "minus": 1.1277531221356014,
+      "plus": 1.1736773108171121,
+      "q16": 36.21350127216024,
+      "q84": 38.51493170511295
+    },
+    "Lambda2": {
+      "median": 7.036291783185197,
+      "minus": 0.19972377160037613,
+      "plus": 0.2211955414331035,
+      "q16": 6.836568011584821,
+      "q84": 7.2574873246183005
+    },
+    "r_gain_unconditional": {
+      "median": 1.3229901982767514,
+      "minus": 0.01257163432045294,
+      "plus": 0.016883767255251536,
+      "q16": 1.3104185639562984,
+      "q84": 1.3398739655320029
+    },
+    "r_gain_reported": {
+      "median": 1.3229901982767514,
+      "minus": 0.01257163432045294,
+      "plus": 0.016883767255251536,
+      "q16": 1.3104185639562984,
+      "q84": 1.3398739655320029
+    },
+    "delta_phi_weak_deg": {
+      "median": 50.84352762887691,
+      "minus": 2.9699882125825496,
+      "plus": 3.399827326074707,
+      "q16": 47.87353941629436,
+      "q84": 54.24335495495162
+    },
+    "delta_phi_strong_deg": {
+      "median": 39.15647237112307,
+      "minus": 3.3998273260746785,
+      "plus": 2.969988212582571,
+      "q16": 35.756645045048394,
+      "q84": 42.126460583705644
+    },
+    "weak_axis_w0": {
+      "median": -0.20227614230351726,
+      "minus": 0.0029265492387755554,
+      "plus": 0.0029059151982333276,
+      "q16": -0.20520269154229281,
+      "q84": -0.19937022710528393
+    },
+    "weak_axis_wa": {
+      "median": 0.9793285261200324,
+      "minus": 0.0006090283324589052,
+      "plus": 0.0005957119002265587,
+      "q16": 0.9787194977875735,
+      "q84": 0.979924238020259
+    }
+  },
+  "lambda2_ge_one": {
+    "count": 400,
+    "total": 400,
+    "fraction": 1.0,
+    "all_realizations": true,
+    "r_gain_reporting": "unconditional",
+    "r_gain_reported_count": 400
+  },
+  "angle_indicators": {
+    "delta_phi_weak_lt_5deg": {
+      "count": 0,
+      "total": 400,
+      "fraction": 0.0,
+      "percent": 0.0
+    },
+    "delta_phi_weak_lt_10deg": {
+      "count": 0,
+      "total": 400,
+      "fraction": 0.0,
+      "percent": 0.0
+    },
+    "delta_phi_weak_lt_45deg": {
+      "count": 16,
+      "total": 400,
+      "fraction": 0.04,
+      "percent": 4.0
+    },
+    "delta_phi_weak_lt_delta_phi_strong": {
+      "count": 16,
+      "total": 400,
+      "fraction": 0.04,
+      "percent": 4.0
+    }
+  },
+  "corr_Lambda1_delta_phi_weak": 0.04821817795609051,
+  "checks": {
+    "positive_generalized_eigenvalues": true,
+    "acute_angles_in_range": true,
+    "orthogonal_axis_angle_complementarity": true,
+    "indicator_columns_match_angles": true
+  },
+  "all_checks_passed": true
+}

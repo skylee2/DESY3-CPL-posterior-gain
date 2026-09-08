@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "label": "BR -> BRS",
+  "inputs": {
+    "reference_file": "chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.br_w0wa_realy3dat.txt",
+    "new_file": "chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.brs_w0wa_realy3dat.txt",
+    "reference_sha256": "499c6902b3f08239f78f2201ef4f7e912c695f0c3517af8ed1056f9b8bb28f54",
+    "new_sha256": "d7ae346ceacd3c313fe7f731c63fb62cd79eda62f24be5303dd6b1ce2c47aea6"
+  },
+  "cuts": [
+    "w0+wa < -0.05",
+    "w0+wa < -0.10",
+    "w0+wa < -0.20"
+  ],
+  "production_pipeline": [
+    "analysis.robustness.boundary_excluded_covariance",
+    "analysis.weighted_stats.weighted_covariance (called by boundary_excluded_covariance)",
+    "analysis.information_modes.fisher_from_covariance",
+    "analysis.generalized_modes.generalized_eigensystem",
+    "analysis.generalized_modes.determinant_identity",
+    "analysis.generalized_modes.incremental_gain_diagnostics",
+    "analysis.information_modes.ordinary_mode_metrics"
+  ],
+  "angle_definition": "acute Euclidean angle in native (w0,wa) coordinates between v1 and the major axis of the selected reference covariance",
+  "results": [
+    {
+      "selection": "full",
+      "margin": null,
+      "reference_retained_weight_fraction": 1.0,
+      "new_retained_weight_fraction": 1.0,
+      "reference_retained_samples": 8045,
+      "new_retained_samples": 11174,
+      "reference_effective_sample_size": 2964.714621247472,
+      "new_effective_sample_size": 3265.6615058413845,
+      "reference_covariance": [
+        [
+          0.03548940947029025,
+          -0.11567907142634155
+        ],
+        [
+          -0.11567907142634155,
+          0.457332778976437
+        ]
+      ],
+      "new_covariance": [
+        [
+          0.005405070713666343,
+          -0.019983126409474722
+        ],
+        [
+          -0.019983126409474722,
+          0.12615353773672097
+        ]
+      ],
+      "Lambda1": 6.734333872760269,
+      "Lambda2": 1.497219691705578,
+      "r_gain": 1.1721243505469714,
+      "weak_axis": [
+        -0.2482027606787984,
+        0.9687081033992765
+      ],
+      "strong_axis": [
+        -0.9687081033992765,
+        -0.2482027606787984
+      ],
+      "dominant_generalized_direction_v1": [
+        -0.18769446568630757,
+        0.5875375228518923
+      ],
+      "delta_phi_weak_deg": 3.345391157663174,
+      "delta_phi_strong_deg": 86.65460884233687,
+      "determinant_closure": {
+        "generalized_product": 10.082777284816562,
+        "information_determinant_ratio": 10.082777284816563,
+        "relative_error": 1.7617733578973602e-16,
+        "passes": true
+      }
+    },
+    {
+      "selection": "w0+wa < -0.05",
+      "margin": 0.05,
+      "reference_retained_weight_fraction": 0.9997834767561398,
+      "new_retained_weight_fraction": 0.9999941491735779,
+      "reference_retained_samples": 8001,
+      "new_retained_samples": 11110,
+      "reference_effective_sample_size": 2963.6343970338894,
+      "new_effective_sample_size": 3265.623646663775,
+      "reference_covariance": [
+        [
+          0.03542065672411406,
+          -0.11546166866739266
+        ],
+        [
+          -0.11546166866739266,
+          0.45666187554070753
+        ]
+      ],
+      "new_covariance": [
+        [
+          0.0054047587207170286,
+          -0.01998176219957682
+        ],
+        [
+          -0.01998176219957682,
+          0.12614788879036035
+        ]
+      ],
+      "Lambda1": 6.721593880742812,
+      "Lambda2": 1.4975293114600337,
+      "r_gain": 1.1726076778940997,
+      "weak_axis": [
+        -0.24811032606904923,
+        0.9687317823308523
+      ],
+      "strong_axis": [
+        -0.9687317823308523,
+        -0.24811032606904923
+      ],
+      "dominant_generalized_direction_v1": [
+        -0.18751103394299135,
+        0.5869457962851331
+      ],
+      "delta_phi_weak_deg": 3.3513543975776634,
+      "delta_phi_strong_deg": 86.6486456024225,
+      "determinant_closure": {
+        "generalized_product": 10.06578385614276,
+        "information_determinant_ratio": 10.065783856142756,
+        "relative_error": 3.5294952977084023e-16,
+        "passes": true
+      }
+    },
+    {
+      "selection": "w0+wa < -0.10",
+      "margin": 0.1,
+      "reference_retained_weight_fraction": 0.9995346507363233,
+      "new_retained_weight_fraction": 0.9999784968113726,
+      "reference_retained_samples": 7968,
+      "new_retained_samples": 11046,
+      "reference_effective_sample_size": 2962.348830630723,
+      "new_effective_sample_size": 3265.5222867717007,
+      "reference_covariance": [
+        [
+          0.03535421992402092,
+          -0.11525130552935114
+        ],
+        [
+          -0.11525130552935114,
+          0.4559975121290324
+        ]
+      ],
+      "new_covariance": [
+        [
+          0.00540410903699172,
+          -0.01997887494673168
+        ],
+        [
+          -0.01997887494673168,
+          0.1261357384977059
+        ]
+      ],
+      "Lambda1": 6.709657258722153,
+      "Lambda2": 1.4975718200144679,
+      "r_gain": 1.172977653967137,
+      "weak_axis": [
+        -0.24802802392728948,
+        0.9687528577231264
+      ],
+      "strong_axis": [
+        -0.9687528577231264,
+        -0.24802802392728948
+      ],
+      "dominant_generalized_direction_v1": [
+        -0.18733404829673747,
+        0.5863831729011398
+      ],
+      "delta_phi_weak_deg": 3.3564663904319807,
+      "delta_phi_strong_deg": 86.64353360956801,
+      "determinant_closure": {
+        "generalized_product": 10.04819363261782,
+        "information_determinant_ratio": 10.048193632617803,
+        "relative_error": 1.7678369907541935e-15,
+        "passes": true
+      }
+    },
+    {
+      "selection": "w0+wa < -0.20",
+      "margin": 0.2,
+      "reference_retained_weight_fraction": 0.9986643634211507,
+      "new_retained_weight_fraction": 0.9986107386574071,
+      "reference_retained_samples": 7877,
+      "new_retained_samples": 10886,
+      "reference_effective_sample_size": 2958.91202305077,
+      "new_effective_sample_size": 3259.2696371572342,
+      "reference_covariance": [
+        [
+          0.03512629428030342,
+          -0.11453896548376194
+        ],
+        [
+          -0.11453896548376194,
+          0.4538269471696448
+        ]
+      ],
+      "new_covariance": [
+        [
+          0.005356016139264308,
+          -0.019774069733322915
+        ],
+        [
+          -0.019774069733322915,
+          0.12531865387062946
+        ]
+      ],
+      "Lambda1": 6.720085657803224,
+      "Lambda2": 1.4987698465875399,
+      "r_gain": 1.1730765077301522,
+      "weak_axis": [
+        -0.24770746063747281,
+        0.9688348744468972
+      ],
+      "strong_axis": [
+        -0.9688348744468972,
+        -0.24770746063747281
+      ],
+      "dominant_generalized_direction_v1": [
+        -0.18675529508187247,
+        0.5851144110902328
+      ],
+      "delta_phi_weak_deg": 3.360014874104273,
+      "delta_phi_strong_deg": 86.63998512589563,
+      "determinant_closure": {
+        "generalized_product": 10.071861750400865,
+        "information_determinant_ratio": 10.07186175040086,
+        "relative_error": 5.291048120263023e-16,
+        "passes": true
+      }
+    }
+  ],
+  "checks": {
+    "all_retained_weight_fractions_in_unit_interval": true,
+    "retained_weight_decreases_monotonically": true,
+    "all_generalized_eigenvalues_positive": true,
+    "all_determinant_closures_pass": true,
+    "all_angles_acute": true,
+    "weak_strong_angles_are_complementary": true
+  },
+  "all_checks_passed": true
+}

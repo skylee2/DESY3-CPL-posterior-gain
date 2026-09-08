@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "label": "BR -> BRS",
+  "method": "independent exponential weighted-multiplier bootstrap",
+  "definitions": {
+    "reference": "first input chain; its resampled covariance defines the weak/strong axes",
+    "weights": "stored normalized posterior weights multiplied by iid Exponential(scale=1) variates separately for reference and new chains",
+    "weak_axis": "oriented eigenvector of the largest eigenvalue of each resampled reference covariance",
+    "angles": "acute Euclidean angles in native (w0, wa) coordinates",
+    "r_gain": "((Lambda1-1)+(Lambda2-1))^2 / ((Lambda1-1)^2+(Lambda2-1)^2)"
+  },
+  "inputs": {
+    "reference_file": "chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.br_w0wa_realy3dat.txt",
+    "new_file": "chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.brs_w0wa_realy3dat.txt",
+    "reference_sha256": "499c6902b3f08239f78f2201ef4f7e912c695f0c3517af8ed1056f9b8bb28f54",
+    "new_sha256": "d7ae346ceacd3c313fe7f731c63fb62cd79eda62f24be5303dd6b1ce2c47aea6",
+    "reference_retained_samples": 8045,
+    "new_retained_samples": 11174
+  },
+  "nboot": 1000,
+  "seed": 20260904,
+  "point": {
+    "Lambda1": 6.734333872760271,
+    "Lambda2": 1.4972196917055784,
+    "r_gain": 1.1721243505469714,
+    "weak_axis": [
+      -0.2482027606787984,
+      0.9687081033992765
+    ],
+    "delta_phi_weak_deg": 3.345391157663174,
+    "delta_phi_strong_deg": 86.65460884233688
+  },
+  "bootstrap_16_50_84": {
+    "Lambda1": {
+      "median": 6.718008817517298,
+      "minus": 0.20514470272406893,
+      "plus": 0.20896509990604795,
+      "q16": 6.512864114793229,
+      "q84": 6.926973917423346
+    },
+    "Lambda2": {
+      "median": 1.5003830498311044,
+      "minus": 0.053287521869511245,
+      "plus": 0.05368059706137873,
+      "q16": 1.4470955279615931,
+      "q84": 1.554063646892483
+    },
+    "r_gain_unconditional": {
+      "median": 1.1738348235278218,
+      "minus": 0.01927165511621287,
+      "plus": 0.019538179183906434,
+      "q16": 1.1545631684116089,
+      "q84": 1.1933730027117282
+    },
+    "r_gain_reported": {
+      "median": 1.1738348235278218,
+      "minus": 0.01927165511621287,
+      "plus": 0.019538179183906434,
+      "q16": 1.1545631684116089,
+      "q84": 1.1933730027117282
+    },
+    "delta_phi_weak_deg": {
+      "median": 3.353316226090377,
+      "minus": 0.1600239816876412,
+      "plus": 0.15597345776257399,
+      "q16": 3.193292244402736,
+      "q84": 3.509289683852951
+    },
+    "delta_phi_strong_deg": {
+      "median": 86.64668377390947,
+      "minus": 0.1559734577624141,
+      "plus": 0.16002398168777177,
+      "q16": 86.49071031614706,
+      "q84": 86.80670775559724
+    },
+    "weak_axis_w0": {
+      "median": -0.24808565755490844,
+      "minus": 0.0020354615920381847,
+      "plus": 0.0019023219170459793,
+      "q16": -0.2501211191469466,
+      "q84": -0.24618333563786246
+    },
+    "weak_axis_wa": {
+      "median": 0.9687381000639623,
+      "minus": 0.0005235444222261298,
+      "plus": 0.00048517929648039804,
+      "q16": 0.9682145556417362,
+      "q84": 0.9692232793604427
+    }
+  },
+  "lambda2_ge_one": {
+    "count": 1000,
+    "total": 1000,
+    "fraction": 1.0,
+    "all_realizations": true,
+    "r_gain_reporting": "unconditional",
+    "r_gain_reported_count": 1000
+  },
+  "angle_indicators": {
+    "delta_phi_weak_lt_5deg": {
+      "count": 1000,
+      "total": 1000,
+      "fraction": 1.0,
+      "percent": 100.0
+    },
+    "delta_phi_weak_lt_10deg": {
+      "count": 1000,
+      "total": 1000,
+      "fraction": 1.0,
+      "percent": 100.0
+    },
+    "delta_phi_weak_lt_45deg": {
+      "count": 1000,
+      "total": 1000,
+      "fraction": 1.0,
+      "percent": 100.0
+    },
+    "delta_phi_weak_lt_delta_phi_strong": {
+      "count": 1000,
+      "total": 1000,
+      "fraction": 1.0,
+      "percent": 100.0
+    }
+  },
+  "corr_Lambda1_delta_phi_weak": -0.10235675681276452,
+  "checks": {
+    "positive_generalized_eigenvalues": true,
+    "acute_angles_in_range": true,
+    "orthogonal_axis_angle_complementarity": true,
+    "indicator_columns_match_angles": true
+  },
+  "all_checks_passed": true
+}

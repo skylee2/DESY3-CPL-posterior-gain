@@ -1,11 +1,24 @@
-# Chain provenance
+# Chain provenance and redistribution policy
 
-The historical external-only chains used for the central comparisons were run for the DES Year 3 extensions analysis. They were supplied directly by Jessica Muir from the DES analysis team. DES regards chains run for that Y3 paper as public products, although these particular external-only chains were not all uploaded to the public web release. The author has reviewed and signed off on this provenance statement.
+## Historical external-only chains
 
-Filename interpretation follows the DES Y3 extensions release labeling scheme: `br`, `bs`, `brs`, and `pbrs` identify the corresponding historical external-probe combinations. Exact local file identity is fixed by the filename/SHA256 pairs in `../input/external_chain_SHA256SUMS.txt`. The author manually recomputed all four hashes and confirmed exact agreement with that record.
+The BR, BS, BRS, and PBRS products are historical DES external-only chains. Their complete filenames and SHA-256 hashes are in `input/external_chain_SHA256SUMS.txt`.
 
-For the BS/BRS comparison, parameters common to both runs use the same priors according to the DES-team clarification. The BS run fixes $A_s$ and $n_s$, while the BRS run varies and marginalizes over them. The author has signed off on this interpretation. This document records the clarification without reproducing private correspondence.
+The headers identify PolyChord with 500 live points and 60 repeats and a shared prior file, `extensions_fiducial/extensions_ini_files/priors_ml_datasettings.ini`. BS has seven varied parameters with fixed `n_s = 0.97` and `A_s = 2.19e-9`. BRS has nine varied parameters and samples `n_s` and `A_s` over the header-recorded prior ranges. PBRS is tracked for provenance although it is not required for the three directional comparisons in this package.
 
-The exact public D3 inputs were identified unambiguously from the paths recorded in the archived D3 production JSON and by agreement of their sample counts, ESS values, means, covariances, and generalized gains with the frozen manuscript. Their filename/SHA256 pairs are recorded in `../input/public_d3_chain_SHA256SUMS.txt`.
+These raw chains are not publicly redistributed in this candidate. The checksum records permit an authorized local copy to be verified without conflating historical external-only inputs with public D3 products.
 
-Raw chain files are deliberately **not redistributed** in this release. No private email address, screenshot, or extended quotation from private correspondence is included. Private-provenance author sign-off is **RESOLVED**.
+## Public D3 products
+
+The public inputs are:
+
+- `d3_w0wa_nla_realy3dat.txt` for DES Y3 3x2pt;
+- `d3_brs_w0wa_nla_realy3dat.txt` for DES Y3 3x2pt+BRS.
+
+Their hashes are in `input/public_d3_chain_SHA256SUMS.txt`. D3 -> D3+BRS adds the full BRS external block and is not an RSD-only test.
+
+Machine-readable results store these two basenames as portable input identifiers. They are not paths into a parent development repository. To reproduce an analysis, obtain the public files, verify their hashes, and pass their actual local paths explicitly on the command line; generated output will retain only the basename identifiers.
+
+## Packaged data policy
+
+Only checksums, derived numerical products, scripts, figures, and documentation are included. No filename matching a raw historical `chain_*.txt` is present. The release-wide verifier enforces this policy.

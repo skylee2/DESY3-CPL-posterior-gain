@@ -1,105 +1,65 @@
-# DES Y3 CPL Posterior-Gain Reproducibility Package
+# DESY3 CPL posterior-gain release candidate v1.1.0
 
-[![DOI](https://zenodo.org/badge/1358128757.svg)](https://doi.org/10.5281/zenodo.22342577)
+This unpublished release candidate reproduces the manuscript-facing numerical analysis for `paper1_Y3_submission_finaljournal_v3.tex` (SHA-256 `56919dc92f8466f3c2b23ffb8c860e49b8d833f97c73ed913e1c85893d79e340`). It supersedes the analysis packaging in public release v1.0.0; it does not replace or modify that release.
 
-## Purpose
+The package contains analysis code, machine-readable outputs, figures, provenance records, and integrity hashes. It intentionally contains no raw DES chain files.
 
-This repository accompanies the paper “Growth-Sensitive Information Preferentially Tightens the Distance-Probe Weak Direction in CPL Dark Energy: A Posterior-Level Test with Historical DES Year 3 Chains.” It preserves the code, compact numerical outputs, figures, and provenance records used to audit the covariance-pair generalized-gain analysis. It does not contain the manuscript or the DES chain data.
+## Scientific scope
 
-## Scientific headline
+- `results/points/`: point estimates for BS -> BRS, BR -> BRS, and D3 -> D3+BRS.
+- `results/bootstrap/`: current directional bootstrap realizations and summaries.
+- `results/robustness/`: hard-prior and 68% HPD robustness outputs used in manuscript Table 3.
+- `results/validation/`: the standalone 12-check synthetic validation, metadata for all three figure generators, published-covariance check, and full v3 release audit.
+- `results/production/`: preserved production outputs, separated from regenerated audit outputs.
+- `figures/`: the three manuscript-facing covariance-geometry figures. The original historical plotting scripts were not retained. `scripts/generate_figure1.py` and `scripts/generate_figure2.py` are explicitly reconstructed replacement generators that reproduce the validated scientific geometry from packaged point-result JSON files; they are not represented as the original plotters. Figure 3 explicitly identifies dominant `v1` and subdominant `v2`.
 
-For the historical external-only BS to BRS comparison, the dominant incremental precision gain is approximately $\Lambda_1=3.15$ and lies approximately $4.63$ degrees from the pre-existing BS weak covariance axis.
-
-## Contents
-
-- `scripts/`: the clean documented reproducer and independent printed-covariance validator.
-- `scripts/production/`: unchanged original bootstrap production scripts retained as provenance objects.
-- `results/`: the archived v07.2 bootstrap realizations and summary, plus the deterministic printed-covariance output.
-- `figures/`: the three final figure PDFs copied byte-for-byte from the frozen submission package.
-- `input/`: external-input instructions and verified filenames/SHA256 identities; no chain data.
-- `docs/`: manuscript-to-code mapping, numerical and chain provenance, and validation details.
-- `MANIFEST.md`, `SHA256SUMS`, `VERSION`, `CHANGELOG.md`, `CITATION.cff`, `LICENSE`, and `NOTICE`: release metadata and integrity records.
-
-## External inputs
-
-DES chains are not redistributed. The four historical external-only inputs expected by the production records are:
-
-- `chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.br_w0wa_realy3dat.txt`
-- `chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.bs_w0wa_realy3dat.txt`
-- `chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.brs_w0wa_realy3dat.txt`
-- `chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.pbrs_w0wa_realy3dat.txt`
-
-Verify authorized local copies against [`input/external_chain_SHA256SUMS.txt`](input/external_chain_SHA256SUMS.txt). Public DES Y3 D3 and D3+BRS chains are likewise not bundled; supply their local paths explicitly to the clean reproducer.
+The historical external-only BR, BS, BRS, and PBRS chains are identified by filename and SHA-256 in `input/external_chain_SHA256SUMS.txt`; they are not redistributed. The public D3 and D3+BRS chains are identified in `input/public_d3_chain_SHA256SUMS.txt`, but are also omitted from this compact package. Supply verified local copies to rerun chain-level calculations.
 
 ## Quick validation
 
-From the package root:
+Python 3.10 or newer is recommended.
 
 ```bash
-python scripts/check_published_covariances.py
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python scripts/validate_synthetic_gaussian.py
+MPLBACKEND=Agg MPLCONFIGDIR=/tmp/desy3_mplconfig \
+  .venv/bin/python scripts/generate_figure1.py
+MPLBACKEND=Agg MPLCONFIGDIR=/tmp/desy3_mplconfig \
+  .venv/bin/python scripts/generate_figure2.py
+MPLBACKEND=Agg MPLCONFIGDIR=/tmp/desy3_mplconfig \
+  .venv/bin/python scripts/generate_figure3.py
+.venv/bin/python scripts/verify_v3_release.py
+shasum -a 256 -c SHA256SUMS
 ```
 
-This deterministic check requires no chain data and uses only the six-decimal covariance matrices printed in the paper.
+The final verifier checks all manuscript-facing point values, bootstrap summaries, Table 3 robustness values, public-chain reproduction checks, the 12 synthetic checks, all three figure metadata/hash records, Figure 3 semantics, input provenance records, and the absence of redistributed historical chains.
 
-## Full-chain reproduction
+## Reproducing from chains
 
-The canonical interface is `scripts/paper1_y3_reproduce.py`; no additional wrapper is needed. Inspect all commands with:
+Use `scripts/paper1_y3_reproduce.py` for point, bootstrap, and robustness calculations. The transition-specific scripts preserve the adopted production definitions:
 
 ```bash
-python scripts/paper1_y3_reproduce.py --help
+.venv/bin/python scripts/paper1_y3_reproduce.py point REF_CHAIN NEW_CHAIN \
+  --label BS_to_BRS --output results/points/bs_brs_point.json
+
+.venv/bin/python scripts/bootstrap_directional_diagnostics.py \
+  BR_CHAIN BRS_CHAIN --label BR_to_BRS --nboot 1000 --seed 20260906 \
+  --output-prefix results/bootstrap/br_brs_directional_bootstrap
+
+.venv/bin/python scripts/hard_prior_directional_robustness.py \
+  BS_CHAIN BRS_CHAIN --label BS_to_BRS \
+  --output-prefix results/robustness/bs_brs_hard_prior_directional
 ```
 
-For the central point estimate:
+See `docs/NUMERICAL_PROVENANCE.md`, `docs/CHAIN_PROVENANCE.md`, `docs/REPRODUCIBILITY_MAP.md`, and `docs/ENVIRONMENT.md` for exact inputs, seeds, definitions, environment, and output mappings.
 
-```bash
-python scripts/paper1_y3_reproduce.py point \
-  /path/to/des_y3_chains/chain_...bs_w0wa_realy3dat.txt \
-  /path/to/des_y3_chains/chain_...brs_w0wa_realy3dat.txt \
-  --label "BS -> BRS" \
-  --output /path/to/output/bs_to_brs_point.json
-```
+## Interpretation guardrails
 
-The same `point` command accepts the BR/BRS pair and the public D3/D3+BRS pair. The script never downloads data and never assumes chains are included.
+Generalized covariance gain is a reference-dependent multiplicative precision comparison, not an additive Fisher contribution. FoM gain does not determine directional complementarity, and covariance contraction is distinct from posterior-center motion. D3 -> D3+BRS adds the full BRS block and is not an RSD-only test. Published DES Y6 FoM gains do not determine this directional decomposition.
 
-## Bootstrap reproduction
+For D3 -> D3+BRS, the dominant direction is `v1` with Lambda1 about 37.22 and a 50.82-degree angle from the weak D3 axis. It is not weak-axis aligned. The subdominant `v2`, with Lambda2 about 7.06, lies about 2.23 degrees from the weak D3 axis.
 
-The clean implementation can run the declared multiplier bootstrap:
+## Release status
 
-```bash
-python scripts/paper1_y3_reproduce.py bootstrap \
-  /path/to/des_y3_chains/chain_...bs_w0wa_realy3dat.txt \
-  /path/to/des_y3_chains/chain_...brs_w0wa_realy3dat.txt \
-  --nboot 1000 --seed 20260904 \
-  --csv /path/to/output/bs_brs_bootstrap.csv \
-  --output /path/to/output/bs_brs_bootstrap.json
-```
-
-The unchanged script `scripts/production/bs_brs_bootstrap_v072.py` and its archived CSV/summary document the actual manuscript-production bootstrap. Exact percentile values depend on the RNG seed, stream, and retained-row convention, so the clean implementation is not represented as byte-identical to the production realization stream.
-
-## Reproducibility map
-
-See [`docs/REPRODUCIBILITY_MAP.md`](docs/REPRODUCIBILITY_MAP.md).
-
-## Provenance
-
-See [`docs/CHAIN_PROVENANCE.md`](docs/CHAIN_PROVENANCE.md) and [`docs/NUMERICAL_PROVENANCE.md`](docs/NUMERICAL_PROVENANCE.md). The raw chains are deliberately excluded.
-
-## Software requirements
-
-- Python 3.10 or newer
-- NumPy
-- SciPy
-
-Install the declared minimum dependencies with `python -m pip install -r requirements.txt` in an isolated environment.
-
-## Citation
-
-Use `CITATION.cff` to cite this software package and cite the accompanying paper. The exact v1.0.0 reproducibility package associated with the manuscript is permanently archived on Zenodo at https://doi.org/10.5281/zenodo.22342578.
-
-## License
-
-The MIT license applies to original author-created code and documentation within the scope explained in `NOTICE`. It does not license or redistribute DES chain data or relicense third-party survey products.
-
-## Version
-
-Version `1.0.0`, archived release dated 2026-09-05.
+Version 1.1.0 is a release candidate only. It has not been published to GitHub or Zenodo. The v1.0.0 DOI and release metadata refer only to the older public artifact.

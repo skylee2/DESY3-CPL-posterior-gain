@@ -216,8 +216,10 @@ def pair_diagnostics(ref: Chain2D, new: Chain2D) -> Dict:
     Dref = float(np.sqrt(dmu @ np.linalg.inv(cov_ref) @ dmu))
 
     return {
-        "ref_file": str(ref.path),
-        "new_file": str(new.path),
+        # Store portable input identifiers, never development-tree paths.
+        # Callers provide the actual input locations on the command line.
+        "ref_file": ref.path.name,
+        "new_file": new.path.name,
         "n_ref": int(len(ref.w0)),
         "n_new": int(len(new.w0)),
         "neff_ref": neff(ref.weight),
